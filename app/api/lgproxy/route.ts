@@ -4,7 +4,7 @@ import { NextRequest, NextResponse } from 'next/server';
 export async function POST(req: NextRequest) {
   const { command, endpoint } = await req.json();
   // endpoint: '/bird', '/bird6', '/traceroute', '/traceroute6'
-  const url = `http://103.254.106.158:5000${endpoint}?q=${encodeURIComponent(command)}`;
+  const url = `http://103.254.104.35:5000${endpoint}?q=${encodeURIComponent(command)}`;
   const res = await fetch(url, {
     method: 'GET',
     headers: {
